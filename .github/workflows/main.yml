@@ -11,16 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Set up   Python environment
+      - name: Set up  Python environment
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'   
+          python-version: '3.11'
 
 
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name:   Build the Docker image
+      - name: Build the Docker image
         run: docker build -t simple-app1 .
 
       - name: Login to Docker registry
